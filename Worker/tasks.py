@@ -1,4 +1,4 @@
-from testqlearner import test_code
+from __future__ import absolute_import
 from app import app
 import time
 
@@ -8,9 +8,7 @@ def add(x, y):
 
 @app.task
 def long_add(x, y): 
+    print "long add starts"
     time.sleep(5)
+    print "long add ends"
     return x + y
-
-# @app.task
-# def learner():
-#     return test_code()
